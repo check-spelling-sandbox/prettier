@@ -1,0 +1,47 @@
+# css font-family
+font-family:
+;
+
+# Public Keys
+-----BEGIN PUBLIC KEY-----
+-----END PUBLIC KEY-----
+
+# RSA Private Key
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
+
+# GPG Public Key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+-----END PGP PUBLIC KEY BLOCK-----
+
+# Certificates
+-----BEGIN CERTIFICATE-----
+-----END CERTIFICATE-----
+
+# Old version output
+Print an error message when `--find-config-path` can't find config file
+\####
+
+# prettier ignore
+<!-- prettier-ignore -->
+\# 
+
+# cSpell
+cSpell:disable
+cSpell:enable
+
+# credits
+_Adam Stankiewicz
+_
+
+# css
+background: url(
+)
+
+# css
+background-image: url(
+)
+
+# language-js
+testCallCalleePatterns =
+]
