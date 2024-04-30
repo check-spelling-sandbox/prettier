@@ -20,7 +20,7 @@ async function update() {
     "Fetching github dependents count",
     fetchText("https://github.com/prettier/prettier/network/dependents"),
   );
-  const dependentsCountGithub = Number(
+  const dependentsCountGitHub = Number(
     githubPage
       .replaceAll("\n", "")
       .match(
@@ -42,7 +42,7 @@ async function update() {
       )
       .replace(
         /(<strong data-placeholder="dependent-github">)(.*?)(<\/strong>)/,
-        `$1${formatNumber(dependentsCountGithub)}$3`,
+        `$1${formatNumber(dependentsCountGitHub)}$3`,
       ),
   );
 

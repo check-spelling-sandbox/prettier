@@ -3,7 +3,7 @@
 const React = require("react");
 const PropTypes = require("prop-types");
 
-const GithubButton = (props) => (
+const GitHubButton = (props) => (
   <a
     className="github-button"
     href={props.config.githubUrl}
@@ -15,7 +15,7 @@ const GithubButton = (props) => (
   </a>
 );
 
-GithubButton.propTypes = {
+GitHubButton.propTypes = {
   config: PropTypes.object,
 };
 
@@ -79,7 +79,7 @@ class Footer extends React.Component {
             <a href={this.props.config.baseUrl + "blog"}>Blog</a>
             <a href={this.props.config.githubUrl}>GitHub</a>
             <a href={this.props.config.githubUrl + "/issues"}>Issues</a>
-            <GithubButton config={this.props.config} />
+            <GitHubButton config={this.props.config} />
           </div>
         </section>
       </footer>
