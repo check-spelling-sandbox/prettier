@@ -41,7 +41,7 @@ function processReplacements(replacements) {
       Object.hasOwn(replacement, "path")
     ) {
       if (module === "*") {
-        throw new Error("Can not replace all modules with the same path.");
+        throw new Error("Cannot replace all modules with the same path.");
       }
 
       checkPathReplaced(module);
@@ -58,7 +58,7 @@ function processReplacements(replacements) {
 
     if (Object.hasOwn(replacement, "text")) {
       if (module === "*") {
-        throw new Error("Can not replace all modules with the same content.");
+        throw new Error("Cannot replace all modules with the same content.");
       }
 
       checkPathReplaced(module);
