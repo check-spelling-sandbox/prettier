@@ -5,7 +5,7 @@ import url from "node:url";
 import createEsmUtils from "esm-utils";
 
 import { copyFile, DIST_DIR, PROJECT_ROOT } from "../utils/index.js";
-import buildJavascriptModule from "./build-javascript-module.js";
+import buildJavaScriptModule from "./build-javascript-module.js";
 import buildLicense from "./build-license.js";
 import buildPackageJson from "./build-package-json.js";
 import buildTypes from "./build-types.js";
@@ -542,7 +542,7 @@ const universalFiles = [...nonPluginUniversalFiles, ...pluginFiles].flatMap(
           ...buildOptions,
         },
         isPlugin,
-        build: buildJavascriptModule,
+        build: buildJavaScriptModule,
         kind: "javascript",
       })),
       getTypesFileConfig({ input, outputBaseName, isPlugin }),
@@ -640,7 +640,7 @@ const nodejsFiles = [
       },
       platform: "node",
       buildOptions,
-      build: buildJavascriptModule,
+      build: buildJavaScriptModule,
       kind: "javascript",
     },
     getTypesFileConfig({ input, outputBaseName }),
