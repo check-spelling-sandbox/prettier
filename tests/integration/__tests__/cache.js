@@ -660,7 +660,7 @@ describe("--cache option", () => {
         await expect(fs.stat(nonDefaultCacheFilePath)).resolves.not.toThrow();
       });
 
-      it("does'nt format when cache is available", async () => {
+      it("doesn't format when cache is available", async () => {
         const cliArguments = [
           "--cache",
           "--write",
