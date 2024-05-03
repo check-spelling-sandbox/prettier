@@ -68,9 +68,18 @@ jobs:
         if: ${{ matrix.ENABLE_CODE_COVERAGE }}
         run: yarn c8 yarn test
 
+      - name: Upload Coverage Artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ matrix.ENABLE_CODE_COVERAGE }}
+        with:
+          name: code-coverage
+          path: coverage/lcov.info
+
       - name: Upload Coverage
         uses: codecov/codecov-action@v4
-        if: ${{ matrix.ENABLE_CODE_COVERAGE }}
+        if: ${{ matrix.ENABLE_CODE_COVERAGE && env.HAS_CODECOV_TOKEN }}
+        env:
+          HAS_CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN && 1 || '' }}
         with:
           fail_ci_if_error: true
           files: coverage/lcov.info
