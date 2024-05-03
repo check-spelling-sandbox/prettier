@@ -18,7 +18,7 @@ function calculateLocStart(node, text) {
   }
 
   /* c8 ignore next */
-  throw Object.assign(new Error("Can not locate node."), { node });
+  throw Object.assign(new Error("Cannot locate node."), { node });
 }
 
 function calculateLocEnd(node, text) {

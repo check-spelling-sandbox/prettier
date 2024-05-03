@@ -66,7 +66,7 @@ async function buildPackageJson({ file, files }) {
           }),
       ),
       // Legacy entries
-      // TODO: Remove bellow in v4
+      // TODO: Remove below in v4
       "./esm/standalone.mjs": "./standalone.mjs",
       ...Object.fromEntries(
         files

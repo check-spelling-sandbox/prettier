@@ -9,7 +9,7 @@ async function logResolvedConfigPathOrDie(context) {
   if (configFile) {
     printToScreen(normalizeToPosix(path.relative(process.cwd(), configFile)));
   } else {
-    throw new Error(`Can not find configure file for "${file}".`);
+    throw new Error(`Cannot find configure file for "${file}".`);
   }
 }
 

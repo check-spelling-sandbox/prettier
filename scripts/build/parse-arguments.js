@@ -49,22 +49,20 @@ function parseArguments() {
   if (result.compareSize) {
     if (result.minify === false) {
       throw new Error(
-        "'--compare-size' can not use together with '--no-minify' flag",
+        "'--compare-size' cannot use together with '--no-minify' flag",
       );
     }
 
     if (result.saveAs) {
       throw new Error(
-        "'--compare-size' can not use together with '--save-as' flag",
+        "'--compare-size' cannot use together with '--save-as' flag",
       );
     }
   }
 
   if (Array.isArray(result.reports) && result.reports.includes("all")) {
     if (result.reports.length !== 1) {
-      throw new Error(
-        "'--report=all' can not use with another '--report' flag",
-      );
+      throw new Error("'--report=all' cannot use with another '--report' flag");
     }
 
     result.reports = ["html", "text", "stdout"];

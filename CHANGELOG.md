@@ -1698,7 +1698,7 @@ type Foo = Foooooooooooooooooooooooooooooooooooooooooooooooooooooooooo extends [
   ? Foo3
   : Foo4;
 
-// Prettier 2.5.0 (tailingCommma = all)
+// Prettier 2.5.0 (tailingComma = all)
 // Invalid TypeScript code
 type Foo = Foooooooooooooooooooooooooooooooooooooooooooooooooooooooooo extends [
   ,

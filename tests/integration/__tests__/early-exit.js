@@ -37,11 +37,7 @@ describe("throw error with --help not-found", () => {
 });
 
 describe("show warning with --help not-found (typo)", () => {
-  runCli("cli", [
-    "--help",
-    // cspell:disable-next-line
-    "parserr",
-  ]).test({
+  runCli("cli", ["--help", "parser_"]).test({
     status: 0,
   });
 });

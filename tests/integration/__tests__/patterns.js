@@ -9,7 +9,7 @@ describe("multiple patterns", () => {
 });
 
 describe("multiple patterns with non exists pattern", () => {
-  runCli("cli/patterns", ["directory/**/*.js", "non-existent.js", "-l"]).test({
+  runCli("cli/patterns", ["directory/**/*.js", "nonexistent.js", "-l"]).test({
     status: 2,
   });
 });
@@ -50,14 +50,12 @@ describe("no errors on empty patterns", () => {
   });
 });
 
-describe("multiple patterns, throw error and exit with non zero code on non existing files", () => {
-  runCli("cli/patterns", [
-    "non-existent.js",
-    "other-non-existent.js",
-    "-l",
-  ]).test({
-    status: 2,
-  });
+describe("multiple patterns, throw error and exit with non zero code on nonexistent files", () => {
+  runCli("cli/patterns", ["nonexistent.js", "other-nonexistent.js", "-l"]).test(
+    {
+      status: 2,
+    },
+  );
 });
 
 describe("file names with special characters", () => {
